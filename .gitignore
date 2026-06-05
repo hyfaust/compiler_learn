@@ -1,0 +1,44 @@
+# Qwen Code
+.qwen/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Bytecode
+*.pyc
+*.pyo
+
+# Compiled C
+*.o
+*.exe
+*.out
+
+# Lua bytecode
+*.luac
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Output files
+output.txt
+
+# Third-party source (luajit is a git submodule / external repo)
+luajit/
+
+# Logs
+*.log
