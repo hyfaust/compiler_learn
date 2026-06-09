@@ -310,12 +310,16 @@ body {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     color: var(--text-secondary);
+    text-decoration: none;
     transition: all var(--transition);
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .github-link:hover {
     background: var(--bg-tertiary);
     color: var(--text);
+    text-decoration: none;
 }
 
 .theme-toggle {
@@ -330,6 +334,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    padding: 0;
 }
 
 .theme-toggle:hover {
