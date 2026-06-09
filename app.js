@@ -87,7 +87,7 @@ async function loadChapter(chapterId) {
     history.pushState(null, '', `#${chapter.dir}`);
     
     try {
-        const response = await fetch(`../${chapter.dir}/README.md`);
+        const response = await fetch(`${chapter.dir}/README.md`);
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
         }
@@ -133,8 +133,8 @@ function processImagePaths(markdown, chapterDir) {
     return markdown.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, src) => {
         // 如果是相对路径（不以http://或https://开头）
         if (!src.startsWith('http://') && !src.startsWith('https://') && !src.startsWith('/')) {
-            // 转换为相对于chapter目录的路径
-            const newSrc = `../${chapterDir}/${src}`;
+            // 转换为相对于项目根目录的路径
+            const newSrc = `${chapterDir}/${src}`;
             return `![${alt}](${newSrc})`;
         }
         return match;

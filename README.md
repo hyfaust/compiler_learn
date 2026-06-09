@@ -145,11 +145,10 @@ compiler_learn/
 │   └── tests/
 │       └── test_tinylang.py            # 91 unit tests
 ├── luajit/                             # LuaJIT source code (reference)
-├── web/                                # Web-based document reader
-│   ├── index.html
-│   ├── style.css
-│   ├── app.js
-│   └── chapters.js
+├── index.html                          # Web-based document reader
+├── style.css
+├── app.js
+├── chapters.js
 └── LICENSE                             # GPL v3 License
 ```
 
@@ -194,9 +193,9 @@ A built-in web reader provides a clean, dark-themed reading experience for all c
 
 ```bash
 # Open in browser
-start web/index.html          # Windows
-open web/index.html            # macOS
-xdg-open web/index.html       # Linux
+start index.html          # Windows
+open index.html            # macOS
+xdg-open index.html       # Linux
 ```
 
 Features:

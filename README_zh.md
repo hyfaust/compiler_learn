@@ -145,11 +145,10 @@ compiler_learn/
 │   └── tests/
 │       └── test_tinylang.py            # 91 个单元测试
 ├── luajit/                             # LuaJIT 源代码（参考）
-├── web/                                # 基于 Web 的文档阅读器
-│   ├── index.html
-│   ├── style.css
-│   ├── app.js
-│   └── chapters.js
+├── index.html                          # 基于 Web 的文档阅读器
+├── style.css
+├── app.js
+├── chapters.js
 └── LICENSE                             # GPL v3 许可证
 ```
 
@@ -194,9 +193,9 @@ gcc 02_compiler_architecture/symbol_table.c -o symtab && ./symtab
 
 ```bash
 # 在浏览器中打开
-start web/index.html          # Windows
-open web/index.html            # macOS
-xdg-open web/index.html       # Linux
+start index.html          # Windows
+open index.html            # macOS
+xdg-open index.html       # Linux
 ```
 
 功能特性：
