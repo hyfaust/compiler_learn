@@ -297,6 +297,25 @@ body {
     border-top: 1px solid var(--border);
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-secondary);
+    transition: all var(--transition);
+}
+
+.github-link:hover {
+    background: var(--bg-tertiary);
+    color: var(--text);
 }
 
 .theme-toggle {
@@ -304,7 +323,8 @@ body {
     border: 1px solid var(--border);
     color: var(--text-secondary);
     cursor: pointer;
-    padding: 8px;
+    width: 36px;
+    height: 36px;
     border-radius: var(--radius);
     transition: all var(--transition);
     display: flex;

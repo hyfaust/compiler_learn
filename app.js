@@ -21,18 +21,15 @@ const elements = {
 
 // 初始化marked配置
 function initMarked() {
-    marked.setOptions({
-        highlight: function(code, lang) {
-            if (lang && hljs.getLanguage(lang)) {
-                try {
-                    return hljs.highlight(code, { language: lang }).value;
-                } catch (e) {}
-            }
-            return hljs.highlightAuto(code).value;
-        },
-        breaks: false,
-        gfm: true,
-    });
+    const { markedHighlight } = globalThis.markedHighlight;
+    marked.use(markedHighlight({
+        langPrefix: 'hljs language-',
+        highlight(code, lang) {
+            const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+            return hljs.highlight(code, { language }).value;
+        }
+    }));
+    marked.use({ breaks: false, gfm: true });
 }
 
 // 初始化章节列表
